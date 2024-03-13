@@ -1,0 +1,40 @@
+
+
+Item class - core
+Properties
+	- Item Id(int)
+	- Item Name(String)
+	- Item Description(String)
+	- Price
+
+    Constructor
+    
+	
+
+	
+Item Service - DAL
+Two classes - ItemDbContext, ItemService
+ItemDbContext
+Properties
+	- DbContext
+Actions
+	- Configure 
+ItemService
+Properties
+	- ItemDbContext
+Constructor that takes ItemDbContext as parameter
+Action
+	- CreateItemAsync
+	- GetItemAsync(Id)
+	- GetItemsAsync
+	- UpdateItemDetailsAsync
+	- UpdatePriceAsync
+	- DeleteItemAsync
+	
+Controllers (a class responsible for processing http requests(get,post,patch,delete)
+	- Get/API/Items - to retrieve all items
+	- Get/API/Items(item id) - Retrieve details of specific item.
+	- Post/api/items - Create a new item
+	- Put/api/items(item id) - update an existing item
+	- Patch/api/items/{itemid) - partially update an item
+	- Delete /api/items/{item Id} - delete item
